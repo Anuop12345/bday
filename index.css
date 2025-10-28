@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: radial-gradient(circle at bottom, #150021 0%, #000 100%);
+  overflow-x: hidden;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  color: #ffb6c1;
+  text-shadow: 0 0 20px #ff9ec4, 0 0 40px #fff;
+  margin-top: 60px;
+}
+
+.subtext {
+  font-size: 1.2em;
+  color: #ffe4ec;
+  margin-bottom: 30px;
+}
+
+/* Typewriter */
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid pink;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+}
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+.typewriter2 {
+  overflow: hidden;
+  border-right: .15em solid #ffb6c1;
+  white-space: nowrap;
+  animation: typing2 5s steps(40, end), blink2 0.75s step-end infinite;
+}
+@keyframes typing2 { from { width: 0 } to { width: 100% } }
+@keyframes blink2 { 50% { border-color: transparent } }
+
+/* Main Message */
+.message-box {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  transition: opacity 1s ease;
+}
+
+/* Mini Emotional Cards */
+.mini-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.mini-card {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, #ffb6c1, #ff5c8d);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+.mini-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 30px rgba(255,255,255,0.9);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Emotion Popup */
+.emotion-popup {
+  display: none;
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.5);
+  font-size: 1.3em;
+  max-width: 80%;
+  z-index: 1000;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0%,100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Dim effect when popup open */
+.dimmed {
+  opacity: 0.1;
+}
+
+/* Floating Hearts Background */
+.hearts-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.heart {
+  position: absolute;
+  font-size: 20px;
+  color: #ff7eb3;
+  opacity: 0.7;
+  animation: floatHeart 6s ease-in infinite;
+}
+@keyframes floatHeart {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  50% { opacity: 1; transform: translateY(50vh) scale(1); }
+  100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+}
+
+/* Love Letter */
+.love-letter {
+  background: rgba(255,255,255,0.1);
+  margin: 40px auto;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 15px;
+  padding: 20px;
+  font-style: italic;
+  transition: opacity 1s ease;
+}
+
+footer {
+  font-size: 0.9em;
+  margin: 30px;
+  color: #eee;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 2em; }
+  .mini-card { width: 50px; height: 50px; font-size: 1.3em; }
+}
