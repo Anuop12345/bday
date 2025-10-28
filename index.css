@@ -140,8 +140,8 @@ h1 {
 .love-letter {
   background: rgba(255,255,255,0.1);
   margin: 40px auto;
-  width: 90%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 800px;
   border-radius: 15px;
   padding: 20px;
   font-style: italic;
@@ -159,3 +159,4 @@ footer {
   h1 { font-size: 2em; }
   .mini-card { width: 50px; height: 50px; font-size: 1.3em; }
 }
+
